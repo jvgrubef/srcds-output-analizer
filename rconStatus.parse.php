@@ -48,9 +48,7 @@
     ) {
         echo 'Primary regex failed';
         return;
-    }
-
-    print_r($versionTest);
+    };
 
     $ServerInfo = [
         'hostname' => trim($hostnameTest[1]),
