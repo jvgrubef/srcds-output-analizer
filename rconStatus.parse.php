@@ -54,7 +54,7 @@
         'hostname' => trim($hostnameTest[1]),
         'version'  => trim($versionTest[1]),
         'rev'      => intval($versionTest[3]),
-        'secure'   => (trim($versionTest[4]) !== 'in'),
+        'secure'   => boolval(trim($versionTest[4]) !== 'in'),
         'address'  => [
             'local'  => ['ip' => $ipTest[1], 'port' => intval($ipTest[2])],
             'public' => ['ip' => $ipTest[3], 'port' => intval($ipTest[4])]
@@ -66,8 +66,8 @@
             'bots'      => intval($playerTest[2]),
             'slots'     => intval($playerTest[3])
         ],
-        'active'   => (trim($playerTest[4]) === 'not'),
-        'reserved' => (trim($playerTest[5]) !== 'un')
+        'active'   => boolval(trim($playerTest[4]) === 'not'),
+        'reserved' => boolval(trim($playerTest[5]) !== 'un')
     ];
 
     if (!preg_match($patterns['findPlayers'], $rconStatusOutput, $playerListTest)) {
