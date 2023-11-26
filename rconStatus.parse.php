@@ -86,8 +86,8 @@
             
             return [
                 'id'      => intval($testPlayer[3]),
-                'name'    => $testPlayer[4],
-                'steamid' => $testPlayer[5],
+                'name'    => trim($testPlayer[4]),
+                'steamid' => trim($testPlayer[5]),
                 'time'    => [
                     'hours'   => intval($testPlayer[6]),
                     'minutes' => intval($testPlayer[7]),
