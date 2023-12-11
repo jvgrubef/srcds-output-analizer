@@ -31,8 +31,8 @@
         'udpip'    => '/^udp\/ip\s*:\s*([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\:?([0-9]{1,5})\s*\[\s*public\s*([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\:?([0-9]{1,5})\s*\]/',
         'os'       => '/^os\s*:\s*(.+)/',
         'map'      => '/^map\s*:\s*(.+)/',
-        'players'  => '/^players\s*:\s*(\d+)\s*humans,\s*(\d+)\s*bots\s*\((\d+)\s*max\)\s*\((not\s*)?hibernating\)\s*\((un)?reserved\)/',
-        
+        'players'  => '/^players\s*:\s*(\d+)\s*humans,\s*(\d+)\s*bots\s*\((\d+)\s*max\)\s*\((not\s*)?hibernating\)\s*\((un)?reserved.?(.*)?\)/',
+            
         'testBot'     => '/#([1-9]\d*)/',
         'testPlayer'  => '/^(#\s*([1-9]\d*))\s*(\d+)\s*(\".*\")\s*(STEAM_[0-5]:[01]:\d+)\s*(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)\s*(\d+)\s*(\d+)\s*(active|)\s*(\d+)\s*([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})\:?([0-9]{1,5})?/',
         'findPlayers' => '/#\s*userid\s*name\s*uniqueid\s*connected\s*ping\s*loss\s*state\s*rate\s*adr(.*?)#end/s',
