@@ -54,7 +54,7 @@
         'hostname' => trim($hostnameTest[1]),
         'version'  => trim($versionTest[1]),
         'rev'      => intval($versionTest[3]),
-        'secure'   => boolval(trim($versionTest[4]) !== 'in'),
+        'secure'   => boolval(@trim($versionTest[4]) !== 'in'),
         'address'  => [
             'local'  => ['ip' => $ipTest[1], 'port' => intval($ipTest[2])],
             'public' => ['ip' => $ipTest[3], 'port' => intval($ipTest[4])]
